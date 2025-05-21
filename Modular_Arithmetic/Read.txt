@@ -1,0 +1,7 @@
+from XXXX import XXXX
+
+print (math.gcd(3, 6))
+
+py -3.11 -m idlelib.idle
+
+http://compoasso.free.fr/primelistweb/page/prime/liste_online_en.php
