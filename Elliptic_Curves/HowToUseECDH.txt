@@ -1,0 +1,30 @@
+Here how to use the following two Python scripts :
+
+  1) ECDH-GenPublicKey.py
+
+  2) ECDH-CommonSecret.py
+
+ First you should construct your Secret_Key as explained in line 37 of file ECDH-GenPublicKey.py
+ Put your Secret_Key in line 41 of file ECDH-GenPublicKey.py
+
+ Run ECDH-GenPublicKey.py
+ Your Public_Key is in the file "myPublic_Key.txt".
+ Send or pass this file or just the content to your friend.
+
+ Your friend must do the same and share his public key with you: Public_Key_Friend
+ Put Public_Key_Friend in line 53 of ECDH-CommonSecret.py
+ Put your Secret_Key, constructed above, in my_Secret_Key at line 45 of ECDH-CommonSecret.py
+ The common secret with your friend is now in file 'Common_Secret.txt'
+
+ I suggest a hand-shake by hashing with sha1 the file "Common_Secret.txt" with your friend.
+ and in case of success just to use as common key the SHA256 of the common secret, i.e. a 256 bit key.
+ 
+ Fresh keys can be obtained by postappending a public string to the common secret i.e. "orticoltore" and using
+ SHA3-256 , e.g.  SHA3-256(Common_Secret+"orticoltore") 
+
+
+
+
+
+
+
